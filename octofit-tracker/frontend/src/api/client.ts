@@ -1,4 +1,5 @@
 // Relative /api paths go through the Vite dev proxy, so port 8000 never needs to be public.
+import getJson from './getJson';
 export const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? '';
 
 export async function getJson<T>(path: string): Promise<T> {
